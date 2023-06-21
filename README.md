@@ -30,7 +30,7 @@ MM-Wiki 是一个轻量级的企业知识分享与团队协同软件，可用于
 - 支持文档全文搜索
 
 # 在线快速了解
-- [mm-wiki企业知识分享与团队协同软件](http://wiki.cifaz.com/), 用户名:admin, 密码:mmwiki, 点击不了请复制http://wiki.cifaz.com/
+- [mm-wiki 企业知识分享与团队协同软件](http://wiki.cifaz.com/), 用户名:admin, 密码:mmwiki, 点击不了请复制 http://wiki.cifaz.com/
 
 # 安装
 ## 1. 自助安装
@@ -78,26 +78,26 @@ MM-Wiki 是一个轻量级的企业知识分享与团队协同软件，可用于
 - Docker 部署
     ```
     # 数据库准备
-    # 导入docs/databases/data.sql和docs/databases/table.sql（注：需取消注释data.sql中第一条管理用户插入语句）
+    # 导入 docs/databases/data.sql 和 docs/databases/table.sql（注：需取消注释 data.sql 中第一条管理用户插入语句）
 
     # 两种部署方式可用
     # DockerHub（推荐）
-    # 从DockerHub下载v0.1.7版本
-    # 新增配置文件，数据存放目录以及Mysql数据库配置在mm-wiki.conf配置文件中设置
-    # 挂载配置文件及数据存放目录，启动端口为8080
+    # 从 DockerHub 下载 v0.1.7 版本
+    # 新增配置文件，数据存放目录以及 Mysql 数据库配置在 mm-wiki.conf 配置文件中设置
+    # 挂载配置文件及数据存放目录，启动端口为 8080
     # docker run -d -p 8080:8081 -v /data/mm-wiki/conf/:/opt/mm-wiki/conf/ -v /data/mm-wiki/data:/data/mm-wiki/data/ --name mm-wiki eahom/mm-wiki:v0.1.7
 
     # 本地构建最新代码
     # 构建项目镜像
     # docker build -t mm-wiki-image .
-    # 新增配置文件，数据存放目录以及Mysql数据库配置在mm-wiki.conf配置文件中设置
-    # 挂载配置文件及数据存放目录，启动端口为8080
+    # 新增配置文件，数据存放目录以及 Mysql 数据库配置在 mm-wiki.conf 配置文件中设置
+    # 挂载配置文件及数据存放目录，启动端口为 8080
     # docker run -d -p 8080:8081 -v /data/mm-wiki/conf/:/opt/mm-wiki/conf/ -v /data/mm-wiki/data/:/data/mm-wiki/data/ --name mm-wiki mm-wiki-image
     ```
 ## 2. 如果需要，可用 nginx 配置反向代理
 ```
 upstream frontends {
-    server 127.0.0.1:8088; # MM-Wiki 监听的ip:port
+    server 127.0.0.1:8088; # MM-Wiki 监听的 ip:port
 }
 server {
     listen      80;
@@ -110,7 +110,7 @@ server {
         proxy_set_header X-Scheme $scheme;
         proxy_pass http://frontends;
     }
-    # 静态资源交由nginx管理
+    # 静态资源交由 nginx 管理
     location /static {
         root        /www/mm-wiki; # MM-Wiki 的根目录
         expires     1d;
@@ -191,7 +191,7 @@ $ go build ./
 - 官方 QQ 交流群：853467682
 - 如果您喜欢该项目，请 [Star](https://github.com/phachon/mm-wiki/stargazers).
 - 如果在使用过程中有任何问题， 请提交 [Issue](https://github.com/phachon/mm-wiki/issues).
-- 如果您发现并解决了bug，请提交 [Pull Request](https://github.com/phachon/mm-wiki/pulls).
+- 如果您发现并解决了 bug，请提交 [Pull Request](https://github.com/phachon/mm-wiki/pulls).
 - 如果您想二次开发，欢迎 [Fork](https://github.com/phachon/mm-wiki/network/members).
 - 如果你想交个朋友，欢迎发邮件给 [phachon@163.com](mailto:phachon@163.com).
 
